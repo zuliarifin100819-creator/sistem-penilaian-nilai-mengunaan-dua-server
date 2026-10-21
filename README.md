@@ -8,10 +8,10 @@ Aplikasi ini mengelola data mahasiswa dan nilai melalui dua server yang terhubun
 
 | Anggota | Bagian | Tanggung jawab |
 |---|---|---|
-| **Anggota 1 (saya)** | Client | Mengakses Server 1 dan Server 2 lewat browser, memastikan halaman dapat dibuka dari jaringan yang sama, menguji alur penggunaan, dan mencatat hasil atau kendala. |
-| **Anggota 2** | Server 1 dan database | Menjalankan Apache dan MySQL di Laptop 1, mengimpor database, serta mengelola aplikasi data mahasiswa: tambah, lihat, cari, ubah, dan hapus. |
-| **Anggota 3** | Server 2 | Menjalankan aplikasi pengolahan nilai di Laptop 2, menghubungkannya ke database pada Laptop 1, dan memastikan nilai dapat dihitung serta disimpan. |
-| **Anggota 4** | Integrasi jaringan | Mencatat alamat IP, menyelaraskan konfigurasi URL dan database, membantu pengaturan firewall, serta memastikan komunikasi antarperangkat berjalan. |
+| **zuli arifin** | Client | Mengakses Server 1 dan Server 2 lewat browser, memastikan halaman dapat dibuka dari jaringan yang sama, menguji alur penggunaan, dan mencatat hasil atau kendala. |
+| **M.Maulfi fata al khair** | Server 1 dan database | Menjalankan Apache dan MySQL di Laptop 1, mengimpor database, serta mengelola aplikasi data mahasiswa: tambah, lihat, cari, ubah, dan hapus. |
+| **Abadi** | Server 2 | Menjalankan aplikasi pengolahan nilai di Laptop 2, menghubungkannya ke database pada Laptop 1, dan memastikan nilai dapat dihitung serta disimpan. |
+| **Nafra julian** | Integrasi jaringan | Mencatat alamat IP, menyelaraskan konfigurasi URL dan database, membantu pengaturan firewall, serta memastikan komunikasi antarperangkat berjalan. |
 
 > Ganti “Anggota 1–4” dengan nama anggota kelompok. Anggota 1 adalah orang yang mendapat tugas client.
 
