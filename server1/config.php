@@ -6,7 +6,7 @@ const DB_PASS = '';
 const DB_NAME = 'db_kampus';
 
 // Alamat Server 2 (hanya untuk link menu), mis. 'http://192.168.43.20/server2'
-const SERVER2_URL = 'http://localhost:8082';
+const SERVER2_URL = 'http://10.173.11.106/server2';
 
 function db(): PDO {
     static $pdo = null;

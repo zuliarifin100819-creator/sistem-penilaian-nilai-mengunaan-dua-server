@@ -45,14 +45,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 page_header($id ? 'Ubah Mahasiswa' : 'Tambah Mahasiswa');
 ?>
-<h2><?= $id ? 'Ubah' : 'Tambah' ?> Data Mahasiswa</h2>
-<?php if ($error): ?><div class="alert error"><?= e($error) ?></div><?php endif; ?>
-<form method="post" class="card">
-  <input type="hidden" name="id" value="<?= $id ?>">
-  <label>NIM <input name="nim" value="<?= e($data['nim']) ?>" maxlength="20" required></label>
-  <label>Nama <input name="nama" value="<?= e($data['nama']) ?>" maxlength="100" required></label>
-  <label>Program Studi <input name="prodi" value="<?= e($data['prodi']) ?>" maxlength="100" required></label>
-  <label>Semester <input type="number" name="semester" min="1" max="14" value="<?= e($data['semester']) ?>" required></label>
-  <div><button class="btn-green">Simpan</button> <a class="btn" href="index.php">Batal</a></div>
-</form>
-<?php page_footer();
+<section class="page-heading form-heading">
+  <div>
+    <span class="eyebrow"><span class="eyebrow-dot"></span> STUDENT MANAGEMENT</span>
+    <h1><?= $id ? 'Ubah Data Mahasiswa' : 'Tambah Mahasiswa' ?></h1>
+    <p><?= $id ? 'Perbarui informasi mahasiswa dengan data terbaru.' : 'Lengkapi formulir berikut untuk menambahkan mahasiswa baru.' ?></p>
+  </div>
+  <a class="btn btn-light" href="index.php">← Kembali ke daftar</a>
+</section>
+
+<?php if ($error): ?><div class="alert error"><span class="alert-symbol">!</span><span><?= e($error) ?></span></div><?php endif; ?>
+
+<div class="form-layout">
+  <aside class="form-aside">
+    <div class="aside-icon">✦</div>
+    <h3>Data yang akurat,<br>pengelolaan lebih mudah.</h3>
+    <p>Pastikan informasi yang dimasukkan sudah benar sebelum menyimpan data.</p>
+    <div class="aside-decoration">S</div>
+  </aside>
+
+  <form method="post" class="card form-card">
+    <input type="hidden" name="id" value="<?= $id ?>">
+    <div class="form-card-heading"><h2>Informasi Mahasiswa</h2><span><b>*</b> Wajib diisi</span></div>
+    <label for="nim">NIM <b>*</b><input id="nim" name="nim" value="<?= e($data['nim']) ?>" maxlength="20" placeholder="Contoh: 20240001" required><small>Masukkan NIM, maksimal 20 karakter.</small></label>
+    <label for="nama">Nama Lengkap <b>*</b><input id="nama" name="nama" value="<?= e($data['nama']) ?>" maxlength="100" placeholder="Masukkan nama lengkap" required></label>
+    <label for="prodi">Program Studi <b>*</b><input id="prodi" name="prodi" value="<?= e($data['prodi']) ?>" maxlength="100" placeholder="Contoh: Ilmu Komputer" required></label>
+    <label for="semester">Semester <b>*</b><input id="semester" type="number" name="semester" min="1" max="14" value="<?= e($data['semester']) ?>" placeholder="1 - 14" required><small>Isi angka semester antara 1 sampai 14.</small></label>
+    <div class="form-actions"><a class="btn btn-light" href="index.php">Batal</a><button class="btn btn-primary" type="submit">✓ Simpan Data</button></div>
+  </form>
+</div>
+<?php page_footer(); ?>
